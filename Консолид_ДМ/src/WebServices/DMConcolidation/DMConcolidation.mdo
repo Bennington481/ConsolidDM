@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:WebService xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b3b1163c-1e9d-4db4-9f3c-99c5bc3db47b">
+  <name>DMConcolidation</name>
+  <synonym>
+    <key>ru</key>
+    <value>DMConcolidation</value>
+  </synonym>
+  <namespace>http://www.DMConcolidation.com</namespace>
+  <xdtoPackages xsi:type="core:StringValue">
+    <value>http://v8.1c.ru/8.1/data/core</value>
+  </xdtoPackages>
+  <descriptorFileName>ws1.1cws</descriptorFileName>
+  <reuseSessions>AutoUse</reuseSessions>
+  <sessionMaxAge>20</sessionMaxAge>
+  <operations uuid="11968c26-0432-40dd-a6c2-b8535171154c">
+    <name>ПередатьДокумент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Передать документ</value>
+    </synonym>
+    <comment>1. Для передачи из учетной сиcтемы</comment>
+    <xdtoReturningValueType>
+      <name>Structure</name>
+      <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ПередатьДокумент</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="87bada27-e514-40a6-a391-71afd23aeef8">
+      <name>ИдентификаторДокумента</name>
+      <synonym>
+        <key>ru</key>
+        <value>Идентификатор документа</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="c92f6341-22c7-4066-818f-776ad7ef962b">
+      <name>ТипДокумента</name>
+      <synonym>
+        <key>ru</key>
+        <value>Тип документа</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="d9281a63-cb60-45af-ae99-ead2fe343e3a">
+      <name>ТаблицаGtin</name>
+      <synonym>
+        <key>ru</key>
+        <value>Таблица gtin</value>
+      </synonym>
+      <xdtoValueType>
+        <name>ValueTable</name>
+        <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="a725d5c1-0aa6-4019-8fd1-367172c93ce2">
+    <name>ПолучитьТаблицуGtin</name>
+    <synonym>
+      <key>ru</key>
+      <value>Получить таблицу gtin</value>
+    </synonym>
+    <comment>2.Для получения gtinов по идентификатору документа из мобильного приложения</comment>
+    <xdtoReturningValueType>
+      <name>Structure</name>
+      <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ПолучитьТаблицуGtin</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="f8625243-9bff-4857-8d72-947c2e6a2bb2">
+      <name>ИдентификаторДокумента</name>
+      <synonym>
+        <key>ru</key>
+        <value>Идентификатор документа</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="48591ecd-2cf1-4c9b-8fab-d5db6028f5bb">
+    <name>ПередатьТаблицуDM</name>
+    <synonym>
+      <key>ru</key>
+      <value>Передать таблицу DM</value>
+    </synonym>
+    <comment>3. Для передачи DM в облако</comment>
+    <xdtoReturningValueType>
+      <name>Structure</name>
+      <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ПередатьТаблицуDM</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="c2efe3e5-217b-477e-a541-2c6ad20e69a4">
+      <name>ИдентификаторДокумента</name>
+      <synonym>
+        <key>ru</key>
+        <value>Идентификатор документа</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="10859e72-b626-49dc-a1a6-9fb96d67c2cc">
+      <name>ТаблицаDM</name>
+      <synonym>
+        <key>ru</key>
+        <value>Таблица DM</value>
+      </synonym>
+      <xdtoValueType>
+        <name>ValueTable</name>
+        <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="9b9beea0-74b7-41c0-8065-2678d0e9d5e9">
+    <name>ПолучитьТаблицуDM</name>
+    <synonym>
+      <key>ru</key>
+      <value>Получить таблицу DM</value>
+    </synonym>
+    <comment>4. Для получения дата матриксов в учетную систему из облака</comment>
+    <xdtoReturningValueType>
+      <name>Structure</name>
+      <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ПолучитьТаблицуDM</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="aacf0335-9ae2-4987-a15c-1021c781184e">
+      <name>ИдентификаторДокумента</name>
+      <synonym>
+        <key>ru</key>
+        <value>Идентификатор документа</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="67ac98fc-3023-4891-8797-34df11b6ae6d">
+    <name>Ping</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ping</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>Ping</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+  </operations>
+</mdclass:WebService>
